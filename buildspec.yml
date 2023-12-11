@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 173074572036.dkr.ecr.ap-south-1.amazonaws.com
+  build:
+    commands:
+      - docker build -t mern-backend .
+  post_build:
+    commands:
+       - docker tag adnan-backend:latest 173074572036.dkr.ecr.ap-south-1.amazonaws.com/adnan-backend:latest
+       - docker push 173074572036.dkr.ecr.ap-south-1.amazonaws.com/adnan-backend:latest
