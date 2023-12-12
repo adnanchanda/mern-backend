@@ -10,5 +10,5 @@ phases:
       - docker build -t mern-backend -f Dockerfile .
   post_build:
     commands:
-       - docker tag adnan-backend:latest 173074572036.dkr.ecr.ap-south-1.amazonaws.com/adnan-backend:latest
+       - docker tag mern-backend:latest 173074572036.dkr.ecr.ap-south-1.amazonaws.com/adnan-backend:latest
        - docker push 173074572036.dkr.ecr.ap-south-1.amazonaws.com/adnan-backend:latest
