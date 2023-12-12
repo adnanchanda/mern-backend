@@ -3,7 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-       - aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/i7h1a8h4
+       - aws ecr-public get-login-password --region ap-south-1 | docker login --username AWS --password-stdin public.ecr.aws/i7h1a8h4
   build:
     commands:
       - cd backend
