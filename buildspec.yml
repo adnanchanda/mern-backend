@@ -12,6 +12,7 @@ phases:
     commands:
        - docker tag mern-backend-69:latest public.ecr.aws/i7h1a8h4/mern-backend-69:latest
        - docker push public.ecr.aws/i7h1a8h4/mern-backend-69:latest
+       - cd ..
        - printf '[{"name":"mern-backend-69","imageUri":"public.ecr.aws/i7h1a8h4/mern-backend-69:latest"}]' > imagedefinitions.json
 
 
