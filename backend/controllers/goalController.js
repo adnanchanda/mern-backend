@@ -34,6 +34,7 @@ const updateGoals = asyncHandler(async (req, res) => {
 
   res.status(200).json(updatedGoal);
 });
+
 const deleteGoals = asyncHandler(async (req, res) => {
    const goal = await Goal.findById(req.params.id)
   if (!goal) {
