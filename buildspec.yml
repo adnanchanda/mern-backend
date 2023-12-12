@@ -3,12 +3,12 @@ version: 0.2
 phases:
   pre_build:
     commands:
-       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 173074572036.dkr.ecr.ap-south-1.amazonaws.com 
+       - aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/i7h1a8h4
   build:
     commands:
       - cd backend
-      - docker build -t mern-backend -f Dockerfile .
+      - docker build -t mern-backend-69 -f Dockerfile .
   post_build:
     commands:
-       - docker tag mern-backend-69:latest 173074572036.dkr.ecr.ap-south-1.amazonaws.com/mern-backend-69:latest
-       - docker push 173074572036.dkr.ecr.ap-south-1.amazonaws.com/mern-backend-69:latest
+       - docker tag mern-backend-69:latest public.ecr.aws/i7h1a8h4/mern-backend-69:latest
+       - docker push public.ecr.aws/i7h1a8h4/mern-backend-69:latest
