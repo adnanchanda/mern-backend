@@ -13,7 +13,7 @@ phases:
        - docker tag mern-backend-69:latest public.ecr.aws/i7h1a8h4/mern-backend-69:latest
        - docker push public.ecr.aws/i7h1a8h4/mern-backend-69:latest
        - cd ..
-       - printf '[{"name":"Rani-Deployment","imageUri":"public.ecr.aws/i7h1a8h4/mern-backend-69:latest"}]' > imagedefinitions.json
+       - printf '[{"name":"rani-container","imageUri":"public.ecr.aws/i7h1a8h4/mern-backend-69:latest"}]' > imagedefinitions.json
 
 
 artifacts:
