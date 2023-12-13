@@ -18,4 +18,8 @@ router.put("/:id", updateGoals);
 
 router.delete("/:id", deleteGoals);
 
+router.get("/test", (req, res) => {
+  res.send("khassi ki maa ki chut ");
+});
+
 module.exports = router;
